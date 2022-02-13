@@ -1,0 +1,18 @@
+.add {
+    margin: 20px;
+    padding: 10px;
+    color: #90e0ef;
+    background-color: black;
+    border-radius: 30%;
+    border: solid black 1px;
+    box-shadow: 5px 5px 10px 2px #100f0f;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+}

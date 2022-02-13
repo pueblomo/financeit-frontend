@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Verpflegung",
+      "icon": "cart-shopping",
+      "amount": 13.00
+    },
+    {
+      "id": 2,
+      "name": "Aktivität",
+      "icon": "cat",
+      "amount": 13.21
+    },
+    {
+      "id": 3,
+      "name": "Unterhaltung",
+      "icon": "laptop-code",
+      "amount": 10020.01
+    }
+  ]
+}
