@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 
+import {Navigate, Route, Routes} from 'react-router-dom'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import * as Icons from '@fortawesome/free-solid-svg-icons'
 import CategoriesPage from "./pages/Categories-page"
+import NotFound from "./pages/Not-found"
 
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -13,9 +15,11 @@ library.add(...iconList);
 
 function App() {
     return (
-        <div className="App">
-            <CategoriesPage/>
-        </div>
+        <Routes>
+            <Route path="/" element={<Navigate to="/categories"/>}/>
+            <Route path="/categories" element={<CategoriesPage/>}/>
+            <Route path="*" element={<NotFound/>}/>
+        </Routes>
     );
 }
 
