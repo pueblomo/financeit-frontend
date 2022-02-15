@@ -1,12 +1,13 @@
-import React, {FC, useEffect, useState} from "react"
+import React, {FC, MouseEventHandler, useEffect, useState} from "react"
 import Category from "../models/Category"
-import AddCategoryButton from "../components/categories-page/Add-category-button"
 import classes from "./Categories-page.module.css"
 import useAxios from "../hooks/Use-axios.hook"
 import {AxiosRequestConfig} from "axios"
 import toast, {Toaster} from 'react-hot-toast';
 import CategoriesList from "../components/categories-page/Categories-list"
 import TotalAmount from "../components/categories-page/Total-amount"
+import IconButton from "../components/ui/Icon-button"
+import {useNavigate} from "react-router-dom"
 
 const CategoriesPage: FC = () => {
     const axiosConfig: AxiosRequestConfig = {};
@@ -14,12 +15,13 @@ const CategoriesPage: FC = () => {
     axiosConfig.url = "categories";
     const [categories, setCategories] = useState<Category[]>();
     const [sendRequest] = useAxios<Category[]>(axiosConfig);
+    const navigate = useNavigate();
 
     useEffect((): void => {
         const promise = sendRequest();
         promise.then((data) => setCategories(data))
             .catch(() => setCategories([]));
-        
+
         toast.promise(promise, {
             loading: 'Lade...',
             success: '',
@@ -47,6 +49,10 @@ const CategoriesPage: FC = () => {
         )
     }
 
+    const addHandler: MouseEventHandler = () => {
+        navigate("addCategory");
+    }
+
     return (
         <div>
             <Toaster position="bottom-center" toastOptions={{
@@ -55,7 +61,7 @@ const CategoriesPage: FC = () => {
                     color: "white"
                 }
             }}/>
-            <AddCategoryButton/>
+            <IconButton icon="plus" onClick={addHandler}/>
             {content}
         </div>
     )
