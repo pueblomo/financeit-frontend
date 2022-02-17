@@ -1,5 +1,5 @@
 class Category {
-    id: number;
+    id?: number;
     name: string;
     icon: string
     amount: number

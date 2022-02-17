@@ -1,7 +1,7 @@
 import {useCallback} from "react"
 import axios, {AxiosError, AxiosRequestConfig} from "axios"
 
-const baseURL = "http://localhost/";
+const baseURL = "http://192.168.178.53:3000/";
 
 const useAxios = <T>(config: AxiosRequestConfig) => {
     config.baseURL = baseURL;
@@ -21,7 +21,7 @@ const useAxios = <T>(config: AxiosRequestConfig) => {
                     }
                 })
         });
-    }, []);
+    }, [config]);
 
     return [sendRequest] as const;
 }

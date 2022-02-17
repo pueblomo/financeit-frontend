@@ -24,7 +24,7 @@ const CategoriesPage: FC = () => {
 
         toast.promise(promise, {
             loading: 'Lade...',
-            success: '',
+            success: 'Geladen',
             error: 'Fehler',
         });
     }, []);
