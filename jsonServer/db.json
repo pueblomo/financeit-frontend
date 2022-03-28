@@ -1,22 +1,101 @@
 {
   "categories": [
     {
-      "id": 1,
-      "name": "Verpflegung",
-      "icon": "cart-shopping",
-      "amount": 13.00
-    },
-    {
-      "id": 2,
-      "name": "Aktivität",
+      "name": "Nase",
       "icon": "cat",
-      "amount": 13.21
+      "amount": 3087,
+      "id": 1
     },
     {
-      "id": 3,
-      "name": "Unterhaltung",
-      "icon": "laptop-code",
-      "amount": 10020.01
+      "name": "s",
+      "icon": "cat",
+      "amount": 0,
+      "id": 2
+    },
+    {
+      "name": "Aktivität",
+      "icon": "beer-mug-empty",
+      "amount": 0,
+      "id": 3
+    }
+  ],
+  "expenses": [
+    {
+      "description": "dfsdf",
+      "price": 2222,
+      "categoryId": 1,
+      "date": "2022-03-28T11:23:19.169Z",
+      "id": 1
+    },
+    {
+      "description": "asdasd",
+      "price": 2200,
+      "categoryId": 1,
+      "date": "2022-03-28T11:29:11.205Z",
+      "id": 2
+    },
+    {
+      "description": "sdfsd",
+      "price": 2300,
+      "categoryId": 1,
+      "date": "2022-03-28T11:29:22.128Z",
+      "id": 3
+    },
+    {
+      "description": "qasd",
+      "price": 2200,
+      "categoryId": 1,
+      "date": "2022-03-28T11:29:31.794Z",
+      "id": 4
+    },
+    {
+      "description": "hh",
+      "price": 400,
+      "categoryId": 1,
+      "date": "2022-03-28T11:39:53.080Z",
+      "id": 5
+    },
+    {
+      "description": "eee",
+      "price": 2200,
+      "categoryId": null,
+      "date": "2022-03-28T11:44:58.795Z",
+      "id": 6
+    },
+    {
+      "description": "1",
+      "price": 2200,
+      "categoryId": null,
+      "date": "2022-03-28T11:45:09.354Z",
+      "id": 7
+    },
+    {
+      "description": "ggg",
+      "price": 4400,
+      "categoryId": null,
+      "date": "2022-03-28T11:45:50.950Z",
+      "id": 8
+    },
+    {
+      "description": "55",
+      "price": 5500,
+      "categoryId": null,
+      "date": "2022-03-28T11:46:01.189Z",
+      "id": 9
+    },
+    {
+      "description": "46",
+      "price": 5500,
+      "categoryId": 1,
+      "date": "2022-03-28T11:46:50.744Z",
+      "id": 10
+    },
+    {
+      "description": "fdff",
+      "price": 500,
+      "categoryId": 2,
+      "date": "2022-03-28T11:46:55.943Z",
+      "id": 11
     }
   ]
 }
