@@ -1,27 +1,27 @@
 import React, {FC, useEffect, useState} from "react"
-import CategoriesForm from "../forms/Categories-form"
-import classes from "./Categories-add-page.module.css"
-import Category from "../models/Category"
-import useAxios from "../hooks/Use-axios.hook"
+import Expense from "../models/Expense"
 import {AxiosRequestConfig} from "axios"
+import useAxios from "../hooks/Use-axios.hook"
 import {useNavigate} from "react-router-dom"
 import toast, {Toaster} from 'react-hot-toast';
+import classes from "./Expense-add-page.module.css"
+import ExpensesForm from "../forms/Expense-form"
 
-const CategoriesAddPage: FC = () => {
-    const [categoryState, setCategoryState] = useState<Category>();
+const ExpenseAddPage: FC = () => {
+    const [expenseState, setExpenseState] = useState<Expense>();
     const axiosConfig: AxiosRequestConfig = {};
     axiosConfig.method = "POST";
-    axiosConfig.url = process.env.REACT_APP_SERVER_URL + "/categories";
-    axiosConfig.data = categoryState;
+    axiosConfig.url = process.env.REACT_APP_SERVER_URL + "/expenses";
+    axiosConfig.data = expenseState;
     const [sendRequest] = useAxios(axiosConfig);
     const navigate = useNavigate();
 
-    const onSubmitHandler = (category: Category) => {
-        setCategoryState(category);
-    };
+    const onSubmitHandler = (expense: Expense) => {
+        setExpenseState(expense);
+    }
 
     useEffect(() => {
-        if (categoryState) {
+        if (expenseState) {
             const promise = sendRequest();
             promise.then(() => {
                 navigate('/');
@@ -32,7 +32,7 @@ const CategoriesAddPage: FC = () => {
                 error: 'Fehler',
             });
         }
-    }, [categoryState]);
+    }, [expenseState]);
 
     return (
         <div>
@@ -43,11 +43,11 @@ const CategoriesAddPage: FC = () => {
                 }
             }}/>
             <div className={classes.headingContainer}>
-                <span className={classes.heading}>Kategorie hinzufügen</span>
+                <span className={classes.heading}>Ausgabe hinzufügen</span>
             </div>
-            <CategoriesForm onSubmit={onSubmitHandler}/>
+            <ExpensesForm onSubmit={onSubmitHandler}/>
         </div>
     )
-};
+}
 
-export default CategoriesAddPage;
+export default ExpenseAddPage;

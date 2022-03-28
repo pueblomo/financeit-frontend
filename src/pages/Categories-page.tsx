@@ -12,7 +12,7 @@ import {useNavigate} from "react-router-dom"
 const CategoriesPage: FC = () => {
     const axiosConfig: AxiosRequestConfig = {};
     axiosConfig.method = "GET";
-    axiosConfig.url = "categories";
+    axiosConfig.url = process.env.REACT_APP_SERVER_URL + "/categories";
     const [categories, setCategories] = useState<Category[]>();
     const [sendRequest] = useAxios<Category[]>(axiosConfig);
     const navigate = useNavigate();
