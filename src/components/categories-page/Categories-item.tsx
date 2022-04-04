@@ -11,12 +11,18 @@ const CategoriesItem: FC<{ category: Category }> = (props) => {
     const onCatHandler = () => {
         navigate(props.category.id + "/addExpense")
     }
+    const onExpenseHandler = () => {
+        navigate(props.category.id + "/expenses")
+    }
+
     return (
         <Card>
             <FontAwesomeIcon icon={props.category.icon as IconName} size="lg" className={classes.icon}/>
             <span className={classes.name} onClick={onCatHandler}>{props.category.name}</span>
-            <span className={classes.amount}>{props.category.amount / 100} €</span>
-            <FontAwesomeIcon icon="chevron-right" className={classes.chevron}/>
+            <div onClick={onExpenseHandler}>
+                <span className={classes.amount}>{(props.category.amount / 100).toFixed(2)} €</span>
+                <FontAwesomeIcon icon="chevron-right" className={classes.chevron}/>
+            </div>
         </Card>
     )
 };
