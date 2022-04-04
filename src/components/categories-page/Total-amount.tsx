@@ -15,7 +15,7 @@ const TotalAmount: FC<{ categories: Category[] }> = (props) => {
     return (
         <div className={classes.container}>
             <Card>
-                <span data-testid="totalAmount">{totalAmount / 100} €</span>
+                <span data-testid="totalAmount">{(totalAmount / 100).toFixed(2)} €</span>
             </Card>
         </div>
     )

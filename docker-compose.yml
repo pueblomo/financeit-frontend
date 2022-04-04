@@ -16,6 +16,9 @@ services:
       - "8080"
     depends_on:
       - db
+    environment:
+      DBURL: db
+      DBPASSWORD: example
 
   db:
     image: postgres
