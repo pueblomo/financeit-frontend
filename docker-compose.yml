@@ -17,8 +17,8 @@ services:
     depends_on:
       - db
     environment:
-      DBURL: db
-      DBPASSWORD: example
+      - DBURL=db
+      - DBPASSWORD=example
 
   db:
     image: postgres
