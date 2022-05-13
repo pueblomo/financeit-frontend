@@ -9,6 +9,8 @@ services:
       - backend
     environment:
       REACT_APP_SERVER_URL: /api
+    networks:
+      - backend
 
   backend:
     image: my-go-server
@@ -19,12 +21,49 @@ services:
     environment:
       - DBURL=db
       - DBPASSWORD=example
+      - AGGREGATORURL=goaggregate
+    networks:
+      - backend
+      - service
 
   db:
     image: postgres
     restart: always
     ports:
-      - 5432:5432
+      - "5432"
     environment:
       POSTGRES_PASSWORD: example
+    networks:
+      - service
 
+  goaggregate:
+    image: my-go-server-aggregator
+    ports:
+      - "7080"
+    depends_on:
+      - dbaggregate
+    environment:
+      - DBURL=dbaggregate
+      - DBPASSWORD=example
+    networks:
+      - backend
+      - aggregate
+
+  dbaggregate:
+    image: postgres
+    restart: always
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_PASSWORD: example
+    networks:
+      - aggregate
+
+
+networks:
+  backend:
+    driver: bridge
+  aggregate:
+    driver: bridge
+  service:
+    driver: bridge

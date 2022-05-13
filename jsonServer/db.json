@@ -1,101 +1,237 @@
 {
   "categories": [
     {
-      "name": "Nase",
-      "icon": "cat",
-      "amount": 3087,
+      "name": "nase",
+      "icon": "cart-shopping",
+      "amount": 0,
       "id": 1
     },
     {
-      "name": "s",
+      "name": "testssss",
       "icon": "cat",
       "amount": 0,
       "id": 2
-    },
-    {
-      "name": "Aktivität",
-      "icon": "beer-mug-empty",
-      "amount": 0,
-      "id": 3
     }
   ],
   "expenses": [
     {
-      "description": "dfsdf",
-      "price": 2222,
+      "description": "hmmmm",
+      "price": 2000,
       "categoryId": 1,
-      "date": "2022-03-28T11:23:19.169Z",
+      "date": "2022-05-05T20:27:35.253Z",
       "id": 1
+    }
+  ],
+  "overview": [
+    {
+      "date": "2022-04-01 00:00:00",
+      "categories": [
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 5000
+          },
+          "expenses": [
+            {
+              "id": 2,
+              "date": "2022-04-12T08:35:48.112Z",
+              "description": "Nase2",
+              "price": 3000,
+              "categoryId": 1
+            },
+            {
+              "id": 1,
+              "date": "2022-04-12T08:35:40.004Z",
+              "description": "Nase",
+              "price": 2000,
+              "categoryId": 1
+            }
+          ]
+        },
+        {
+          "category": {
+            "id": 2,
+            "name": "test2",
+            "icon": "cart-shopping",
+            "amount": 5000
+          },
+          "expenses": [
+            {
+              "id": 3,
+              "date": "2022-04-12T08:36:02.66Z",
+              "description": "Bein",
+              "price": 4000,
+              "categoryId": 2
+            },
+            {
+              "id": 4,
+              "date": "2022-04-12T08:36:12.973Z",
+              "description": "Bein2",
+              "price": 1000,
+              "categoryId": 2
+            }
+          ]
+        }
+      ]
     },
     {
-      "description": "asdasd",
-      "price": 2200,
-      "categoryId": 1,
-      "date": "2022-03-28T11:29:11.205Z",
-      "id": 2
+      "date": "2022-03-01 00:00:00",
+      "categories": [
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 23400
+          },
+          "expenses": [
+            {
+              "id": 5,
+              "date": "2022-03-12T08:35:40.004Z",
+              "description": "Nase3",
+              "price": 23400,
+              "categoryId": 1
+            }
+          ]
+        },
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 23400
+          },
+          "expenses": [
+            {
+              "id": 5,
+              "date": "2022-03-12T08:35:40.004Z",
+              "description": "Nase3",
+              "price": 23400,
+              "categoryId": 1
+            }
+          ]
+        },
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 23400
+          },
+          "expenses": [
+            {
+              "id": 5,
+              "date": "2022-03-12T08:35:40.004Z",
+              "description": "Nase3",
+              "price": 23400,
+              "categoryId": 1
+            }
+          ]
+        },
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 23400
+          },
+          "expenses": [
+            {
+              "id": 5,
+              "date": "2022-03-12T08:35:40.004Z",
+              "description": "Nase3",
+              "price": 23400,
+              "categoryId": 1
+            }
+          ]
+        },
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 23400
+          },
+          "expenses": [
+            {
+              "id": 5,
+              "date": "2022-03-12T08:35:40.004Z",
+              "description": "Nase3",
+              "price": 23400,
+              "categoryId": 1
+            }
+          ]
+        },
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 23400
+          },
+          "expenses": [
+            {
+              "id": 5,
+              "date": "2022-03-12T08:35:40.004Z",
+              "description": "Nase3",
+              "price": 23400,
+              "categoryId": 1
+            }
+          ]
+        }
+      ]
     },
     {
-      "description": "sdfsd",
-      "price": 2300,
-      "categoryId": 1,
-      "date": "2022-03-28T11:29:22.128Z",
-      "id": 3
+      "date": "2022-02-01 00:00:00",
+      "categories": [
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 0
+          },
+          "expenses": null
+        }
+      ]
     },
     {
-      "description": "qasd",
-      "price": 2200,
-      "categoryId": 1,
-      "date": "2022-03-28T11:29:31.794Z",
-      "id": 4
+      "date": "2022-01-01 00:00:00",
+      "categories": [
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 4086
+          },
+          "expenses": [
+            {
+              "id": 6,
+              "date": "2022-01-12T08:35:40.004Z",
+              "description": "Nase4",
+              "price": 4086,
+              "categoryId": 1
+            }
+          ]
+        }
+      ]
     },
     {
-      "description": "hh",
-      "price": 400,
-      "categoryId": 1,
-      "date": "2022-03-28T11:39:53.080Z",
-      "id": 5
-    },
-    {
-      "description": "eee",
-      "price": 2200,
-      "categoryId": null,
-      "date": "2022-03-28T11:44:58.795Z",
-      "id": 6
-    },
-    {
-      "description": "1",
-      "price": 2200,
-      "categoryId": null,
-      "date": "2022-03-28T11:45:09.354Z",
-      "id": 7
-    },
-    {
-      "description": "ggg",
-      "price": 4400,
-      "categoryId": null,
-      "date": "2022-03-28T11:45:50.950Z",
-      "id": 8
-    },
-    {
-      "description": "55",
-      "price": 5500,
-      "categoryId": null,
-      "date": "2022-03-28T11:46:01.189Z",
-      "id": 9
-    },
-    {
-      "description": "46",
-      "price": 5500,
-      "categoryId": 1,
-      "date": "2022-03-28T11:46:50.744Z",
-      "id": 10
-    },
-    {
-      "description": "fdff",
-      "price": 500,
-      "categoryId": 2,
-      "date": "2022-03-28T11:46:55.943Z",
-      "id": 11
+      "date": "2021-12-01 00:00:00",
+      "categories": [
+        {
+          "category": {
+            "id": 1,
+            "name": "test1",
+            "icon": "cat",
+            "amount": 0
+          },
+          "expenses": null
+        }
+      ]
     }
   ]
 }

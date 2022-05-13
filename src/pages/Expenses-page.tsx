@@ -15,7 +15,7 @@ const ExpensesPage: FC = () => {
     const [sendRequest] = useAxios<Expense[]>(axiosConfig)
 
     useEffect((): void => {
-        const promise = sendRequest();
+        const promise = sendRequest(undefined, undefined);
         promise.then((data) => setExpenses(data))
             .catch(() => setExpenses([]))
 

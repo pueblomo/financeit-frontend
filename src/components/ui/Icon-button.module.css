@@ -12,7 +12,7 @@
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    bottom: 10px;
+    bottom: 4rem;
     right: 10px;
     z-index: 999;
 }

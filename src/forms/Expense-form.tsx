@@ -45,7 +45,6 @@ const ExpensesForm: FC<{ onSubmit: (expense: Expense) => void }> = (props) => {
                 categoryId: parseInt(catId as string),
                 date: new Date()
             }
-            console.log(exp)
             props.onSubmit(exp)
         } else {
             setFormValid(false)

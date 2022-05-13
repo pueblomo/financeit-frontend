@@ -22,7 +22,7 @@ const ExpenseAddPage: FC = () => {
 
     useEffect(() => {
         if (expenseState) {
-            const promise = sendRequest();
+            const promise = sendRequest(undefined, undefined);
             promise.then(() => {
                 navigate('/');
             });
