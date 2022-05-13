@@ -4,6 +4,8 @@ import ExpensesItem from "./Expenses-item"
 
 const ExpensesList: FC<{ expenses: Expense[] }> = (props) => {
 
+    // TODO: check expense defined
+
     return (
         <div>
             {props.expenses.map(expense => {

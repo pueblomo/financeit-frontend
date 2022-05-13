@@ -5,7 +5,8 @@ import axios, {AxiosError, AxiosRequestConfig} from "axios"
 const useAxios = <T>(config: AxiosRequestConfig) => {
     config.timeout = 1000;
 
-    const sendRequest = useCallback((): Promise<T> => {
+    const sendRequest = useCallback((page: number | undefined, items: number | undefined): Promise<T> => {
+        config.params = {'page': page, 'items': items}
         return new Promise((resolve, reject) => {
             axios.request<T>(config)
                 .then((res) => {

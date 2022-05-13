@@ -22,7 +22,7 @@ const CategoriesAddPage: FC = () => {
 
     useEffect(() => {
         if (categoryState) {
-            const promise = sendRequest();
+            const promise = sendRequest(undefined, undefined);
             promise.then(() => {
                 navigate('/');
             });

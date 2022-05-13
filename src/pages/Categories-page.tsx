@@ -16,11 +16,18 @@ const CategoriesPage: FC = () => {
     const [categories, setCategories] = useState<Category[]>();
     const [sendRequest] = useAxios<Category[]>(axiosConfig);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState<boolean>(true)
 
     useEffect((): void => {
-        const promise = sendRequest();
-        promise.then((data) => setCategories(data))
-            .catch(() => setCategories([]));
+        const promise = sendRequest(undefined, undefined);
+        promise.then((data) => {
+            setCategories(data)
+            setLoading(false)
+        })
+            .catch(() => {
+                setCategories([])
+                setLoading(false)
+            });
 
         toast.promise(promise, {
             loading: 'Lade...',
@@ -29,15 +36,16 @@ const CategoriesPage: FC = () => {
         });
     }, []);
 
-    let content;
+    let content = <br/>;
 
-    if (!categories || categories.length <= 0) {
+    if (!loading && (!categories || categories.length <= 0)) {
         content = (
             <div className={classes.messageContainer}>
                 <span className={classes.message}>Keine Kategorien vorhanden</span>
             </div>
         );
-    } else {
+    }
+    if (!loading && categories && categories.length > 0) {
         content = (
             <>
                 <br/>

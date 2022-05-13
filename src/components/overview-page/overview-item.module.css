@@ -1,0 +1,24 @@
+.icon {
+    color: #90e0ef;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.iconChip {
+    color: black;
+    align-self: center;
+    margin-right: 10px;
+}
+
+
+.date {
+    flex-grow: 2;
+    text-align: start;
+    font-weight: bold;
+    font-size: large;
+}
+
+.expenseContainer {
+    margin-left: 5px;
+    margin-right: 5px;
+}

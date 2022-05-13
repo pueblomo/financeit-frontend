@@ -9,6 +9,8 @@ import NotFound from "./pages/Not-found"
 import CategoriesAddPage from "./pages/Categories-add-page"
 import ExpenseAddPage from "./pages/Expense-add-page"
 import ExpensesPage from "./pages/Expenses-page"
+import OverviewPage from "./pages/Overview-page"
+import Menu from "./components/ui/Menu"
 
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -25,8 +27,10 @@ function App() {
                 <Route path="/categories/addCategory" element={<CategoriesAddPage/>}/>
                 <Route path="/categories/:catId/addExpense" element={<ExpenseAddPage/>}/>
                 <Route path="/categories/:catId/expenses" element={<ExpensesPage/>}/>
+                <Route path="/overview" element={<OverviewPage/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
+            <Menu/>
         </div>
 
     );

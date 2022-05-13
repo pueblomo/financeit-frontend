@@ -32,7 +32,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "eject": "react-scripts eject",
-    "start-server": "json-server --host 192.168.178.53 --watch jsonServer/db.json"
+    "start-server": "json-server --host 172.16.50.109 --watch jsonServer/db.json",
+    "start-server-local": "json-server --watch jsonServer/db.json"
   },
   "eslintConfig": {
     "extends": [
