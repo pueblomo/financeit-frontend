@@ -15,13 +15,16 @@ const OverviewPage: FC = () => {
     axiosConfig.url = process.env.REACT_APP_SERVER_URL + "overview/month";
     const [overviews, setOverviews] = useState<Overview[]>();
     const [sendRequest] = useAxios<Overview[]>(axiosConfig);
-    const [page, setPage] = useState<number>(0)
+    const [page, setPage] = useState<number>(0);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect((): void => {
         const promise = sendRequest(page, 3);
         promise.then((data) => {
+            setLoading(false);
             setOverviews(data)
         }).catch(() => {
+            setLoading(false);
             setOverviews([])
         })
 
@@ -33,13 +36,14 @@ const OverviewPage: FC = () => {
     }, [page])
 
     let content;
-    if (!overviews || overview.length <= 0) {
+    if (!loading && (!overviews || overview.length <= 0)) {
         content = (
             <div>
                 <p>Keine Kategorien gefunden!</p>
             </div>
         )
-    } else {
+    }
+    if (!loading && overviews && overviews.length > 0) {
         content = (
             <div>
                 <br/>
